@@ -1,21 +1,27 @@
 def cadastro():
     print("Seu nome:")
-    usuario = input("-")
-    print("sua senha:")
-    senha = input("-")
-    
-usuario, senha = cadastro()
+    usuario = input("- ")
+
+    print("Sua senha:")
+    senha = input("- ")
+
+    return usuario, senha
+
 
 def login(usuario, senha):
-    while usuario != tusuario or senha != tsenha:
-        print("seu nome:")
-        tusuario = input("-")
-        print("sua senha:")
-        tsenha = input("-") 
-        return tusuario, tsenha
-    else:
-        print("Login realizado com sucesso!")
+    while True:
+        print("Seu nome:")
+        tusuario = input("- ")
+
+        print("Sua senha:")
+        tsenha = input("- ")
+
+        if usuario == tusuario and senha == tsenha:
+            print("Login realizado com sucesso!")
+            break
+        else:
+            print("Usuário ou senha incorretos.")
+
 
 usuario, senha = cadastro()
-login()
-
+login(usuario, senha)
